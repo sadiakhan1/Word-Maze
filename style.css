@@ -22,6 +22,12 @@
     color: black;
 }
 
+/* font family */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /* fixed header */
 
