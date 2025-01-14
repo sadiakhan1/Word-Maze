@@ -76,17 +76,20 @@ html {
 
 
 .keyboard-row {
-    width: 400px;
-
+    width: 100%;
+    max-width: 6000;
+    gap: 2px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .key-tile {
-    width: 36px;
-    height: 40px;
+    width: 43px;
+    height: 47px;
     margin: 1px;
+    gap: 2px;
     border: 1px solid lightgray;
 
     /* Text */
@@ -99,7 +102,7 @@ html {
 
 .enter-key-tile {
     width: 76px;
-    height: 40px;
+    height: 47px;
     margin: 1px;
     border: 1px solid lightgray;
 
