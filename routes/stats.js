@@ -1,5 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const cookieParser = require('cookie-parser');
+const app = express();
+const statsRouter = require('./routes/stats');
 
 // In-memory storage for stats (replace with a database later)
 const userStats = {};
