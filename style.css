@@ -1,16 +1,17 @@
 /* fixed header */
 .navbar {
-    background-color: rgb(255, 255, 255)fff;
+    background-color: rgb(106, 165, 186); /* fixed typo */
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* keeps nav above everything */
 }
 
 .navbar a {
-    float: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -23,118 +24,47 @@
 }
 
 /* font family */
-html {
+html, body {
     font-family: 'Roboto', sans-serif;
-}
-
-
-
-/* fixed header */
-#board {
-    width: 350px;
-    height: 420px;
-    margin: 0 auto;
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tile {
-    /* Box */
-    border: 2px solid lightgray;
-    width: 60px;
-    height: 60px;
-    margin: 2.5px;
-
-    /* Text */
-    color: black;
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.correct {
-    background-color: #6AAA64;
-    color: white;
-    border-color: white;
-}
-
-.present {
-    background-color: #C9B458;
-    color: white;
-    border-color: white;
-}
-
-.absent {
-    background-color: #787C7E;
-    color: white;
-    border-color:white;
-}
-
-
-.keyboard-row {
+        margin: 0;
+    padding: 0;
     width: 100%;
-    max-width: 6000;
-    gap: 2px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.key-tile {
-    width: 43px;
-    height: 47px;
-    margin: 1px;
-    gap: 2px;
-    border: 1px solid lightgray;
-
-    /* Text */
-    font-size: 20px;
-    font-weight: bold;
+/* game board */
+#game-board {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.enter-key-tile {
-    width: 76px;
-    height: 47px;
-    margin: 1px;
-    border: 1px solid lightgray;
-
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    /* Logo */
-.logo {
-    font-size: 35px;
-    text-align: center;
-    line-height: 450px;
-    height: 260px;
-    padding: 0; 
-    margin-bottom: 10px;
-}
-.menuoptions {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 80px;
+}
+  
+.letter-box {
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+  
+.filled-box {
+    border: 2px solid black;
+}
+  
+  .letter-row {
+    display: flex;
+    justify-content: center;
 }
 
-.menuoptions a {
-    display: block;
-    margin: 4px 0;
-    text-decoration: none;
-}
 
+
+/* game level menu */
 .gamelevel {
     font-size: 20px;
     display: flex;
@@ -149,4 +79,85 @@ html {
     display: block;
     margin: 4px 0;
     text-decoration: none;
+}
+
+/* background image */
+.background {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('graphics/background.jpg');
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+/* logo */
+.logo {
+    background-image: url('graphics/logo.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 350px;
+    size: 50px;
+}
+
+/* menu options */
+.menuoptions {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menuoptions a {
+    display: block;
+    margin: 4px 0;
+    text-decoration: none;
+}
+
+.easy, .hard {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.easy a, .hard a {
+    display: block;
+    margin: 4px 0;
+    text-decoration: none;
+}
+
+#keyboard-cont {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keyboard-cont div {
+    display: flex;
+}
+
+.keyboard-button {
+    font-size: 1rem;
+    font-weight: bold;
+    height: 3.5rem;
+    width: 2rem;
+    margin: 0.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: #d3d6da;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: inherit;
+    padding: 0;
+    border: none;
 }
